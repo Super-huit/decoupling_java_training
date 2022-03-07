@@ -24,7 +24,7 @@ public class Simulation {
      * @return true if the player have guessed the right number
      */
     private boolean nextRound() {
-        System.out.println("Devinez le nombre : ");
+        System.out.println("Devinez le nombre ( done or not ): ");
         long guess = player.askNextGuess();
         if (guess == numberToGuess) {
             System.out.println("trouvé");
