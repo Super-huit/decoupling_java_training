@@ -27,6 +27,7 @@ public class Simulation {
         System.out.println("Devinez le nombre : ");
         long guess = player.askNextGuess();
         if (guess == numberToGuess) {
+            System.out.println("trouvé");
             logger.log("trouvé");
             return true;
         }
