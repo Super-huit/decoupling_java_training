@@ -26,8 +26,10 @@ public class Simulation {
     private boolean nextRound() {
         System.out.println("Devinez le nombre : ");
         long guess = player.askNextGuess();
-        if (guess == numberToGuess)
+        if (guess == numberToGuess) {
+            logger.log("trouvé");
             return true;
+        }
         if (guess > numberToGuess) {
             logger.log("C'est plus petit");
             player.respond(false);
