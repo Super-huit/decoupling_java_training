@@ -32,10 +32,10 @@ public class Simulation {
             return true;
         }
         if (guess > numberToGuess) {
-            logger.log("C'est plus petit done");
+            logger.log("done");
             player.respond(false);
         }else{
-            logger.log("C'est plus grand done");
+            logger.log("done");
             player.respond(true);
         }
 
