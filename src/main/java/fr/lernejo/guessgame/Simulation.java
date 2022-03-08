@@ -52,7 +52,7 @@ public class Simulation {
             }
         }
         long eLapsedTime = System.currentTimeMillis() - start;
-        logger.log(won ? "Bravo, vous avez gagné !" : "C'est la fin, vous avez perdu");
+        logger.log(won ? "Bravo, vous avez done !" : "C'est la fin, vous avez perdu");
         logger.log("Temps total : "  + new SimpleDateFormat("mm:ss:SSS").format(new Date(eLapsedTime)));
     }
 }
