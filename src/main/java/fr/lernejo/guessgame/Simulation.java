@@ -35,7 +35,7 @@ public class Simulation {
             logger.log("Le nombre est plus petit won");
             player.respond(false);
         }else{
-            logger.log("Le nombre est plus grand");
+            logger.log("Le nombre est plus grand won");
             player.respond(true);
         }
 
