@@ -27,12 +27,12 @@ public class Simulation {
         //System.out.println("Devinez le nombre ( done or not ): ");
         long guess = player.askNextGuess();
         if (guess == numberToGuess) {
-            System.out.println("won \n");
-            logger.log("won");
+            //System.out.println("won \n");
+            //logger.log("won");
             return true;
         }
         if (guess > numberToGuess) {
-            logger.log("Le nombre est plus petit won\n");
+            logger.log("Le nombre est plus petit\n");
             player.respond(false);
         }else{
             logger.log("Le nombre est plus grand \n");
@@ -52,7 +52,13 @@ public class Simulation {
             }
         }
         long eLapsedTime = System.currentTimeMillis() - start;
-        logger.log(won ? "Bravo, vous avez done !" : "C'est la fin, vous avez perdu");
+        if(won)
+        {
+            logger.log("You have won\n");
+        }else{
+            logger.log("Vous avez perdu\n");
+        }
+        //logger.log(won ? "Bravo, vous avez done !" : "C'est la fin, vous avez perdu");
         logger.log("Temps total : "  + new SimpleDateFormat("mm:ss:SSS").format(new Date(eLapsedTime)));
     }
 }
